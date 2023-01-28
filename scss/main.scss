@@ -1,0 +1,84 @@
+@import '../scss/var';
+@import '../scss/vendor';
+@import '../scss/mixin';
+
+html{
+    font-size:62.5%;
+}
+
+body{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+
+}
+a,
+a:hover{
+    text-decoration: none;
+
+}
+.main_header{
+    width: 100vw;
+    height: 10rem;
+    background:$main-color;
+
+  & .navbar-brand{
+    color: $text-color;
+    animation: music 1s linear infinite;
+    animation-direction: alternate;
+    & .fas{
+        font-size: 4rem;
+        color: $text-color;
+    }
+    @keyframes  music{
+           from{
+            transform:rotate(5deg);
+           }to{
+            transform:rotate(-5deg);
+           }
+    } 
+    &:hover{
+        filter: drop-shadow(0 1.5rem 1rem rgba(257, 257, 257, 0.5));
+    }
+  }
+
+   & .navbar-nav{
+    padding-left: 15rem;
+
+    & .nav-item .nav-link{
+        font-size: 1.6rem;
+        color: $text-color;
+        text-transform: uppercase;
+        padding-right: 3rem;
+    }
+    & .nav-item:last-child > .nav-link  {
+      padding-right: 0%;
+    }
+}
+
+  & .nav-item:hover > .nav-link,
+  & .navbar-brand:hover,
+  & .navbar-brand:hover> .fas{
+    color: $primary-color;
+  }
+  & .my_btn{
+    @include mybtn;
+
+    &:hover{
+       @include hovereffects;
+    }
+  }
+}
+
+
+// our main start
+
+.header_hero{
+    width: 100%;
+    height: 80vh;
+    background: $main-color; 
+
+   
+    }
+    
+    
+
